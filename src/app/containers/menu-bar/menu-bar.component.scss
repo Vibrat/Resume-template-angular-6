@@ -1,0 +1,29 @@
+.menu-container {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  .navbar-nav {
+    flex-direction: row;
+    padding: 4px;
+    > li {
+      padding: 2px 4px;
+      margin: 2px;
+      color: #333333;
+      font-weight: 700;
+      &:hover {
+        cursor: pointer;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+}

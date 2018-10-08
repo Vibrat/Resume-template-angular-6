@@ -1,0 +1,49 @@
+<div class="body-container" id="skills">
+  <div class="body-row">
+    <div class="body-col-1"
+         draggable="true"
+         (drag)="onDrag($event)"
+         (dragstart)="dragStart($event)"
+          (dragend)="onDragEnd($event)">
+        <div class="body-col-content">
+          <div class="btn-group">
+            <button *ngFor="let key of keys"
+                    class="btn button-primary"
+                    (click)="select(key)"
+                    [innerHTML]="key"></button>
+          </div>
+        </div>
+    </div>
+    <div class="body-col-2">
+      <div class="body-col-title">
+        <span>{{ sl.title }}</span>
+        <span class="description">{{ sl.description }}</span>
+      </div>
+      <div class="body-col-content" [attr.data-before]="sl.rate">
+        <div class="content">
+          <div class="title">
+            <span>SPECIFICATIONS</span>
+          </div>
+          <div class="details">
+            <span *ngFor="let skill of sl.skills">
+              {{ skill.name }}
+              <span class="rates">
+                <i *ngFor="let rate of toArray(skill.rate)" class="rate {{ rate }}"></i>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="body-col-footer">
+        <div class="content">
+          <div class="title">
+            <span>CAN DO</span>
+          </div>
+          <div class="details">
+            <span *ngFor="let item of sl.keyNote">{{ item }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

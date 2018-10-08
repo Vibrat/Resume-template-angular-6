@@ -1,0 +1,17 @@
+<div class="menu-container navbar navbar-light bg-light">
+    <ul class="navbar-nav">
+        <li *ngFor="let item of menuItems"
+            class="navbar-item menu-item"
+            [class.hidden-mobile]="item.hideMobile">
+            <a *ngIf="item.tag; else action"
+               [href]="item.tag"
+               [innerHTML]="item.name"></a>
+            <ng-template #action>
+                <a *ngIf="item.action"
+                   [href]="item.data"
+                   (click)="onClick(item.action)"
+                   [innerHTML]="item.name" download></a>
+            </ng-template>
+        </li>
+    </ul>
+</div>

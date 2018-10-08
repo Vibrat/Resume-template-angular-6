@@ -1,0 +1,30 @@
+<div class="body-container" id="about">
+  <div class="body-row">
+     <div class="body-col-1">
+       <div class="body-col-title">
+         <div>
+           <div class="btn-group">
+             <a class="btn button-primary" [href]="cv.link" download>Download CV</a>
+           </div>
+           <div class="btn-group">
+             <a [href]="data.linkedin.value"
+                class="btn button-support" [innerHTML]="data.linkedin.name"
+                target="_blank"></a>
+           </div>
+         </div>
+       </div>
+       <div class="body-col-content">
+         <h1 class="heading-title" [innerHTML]="data.title"></h1>
+       </div>
+     </div>
+    <div class="body-col-2">
+      <div class="body-col-title">
+        <span [innerHTML]="data.summary.UX"></span>
+        <span class="rotate180" [innerHTML]="data.summary.UI"></span>
+      </div>
+      <div class="body-col-content">
+        <span *ngFor="let item of data.summary.skills" [innerHTML]="item"></span>
+      </div>
+    </div>
+  </div>
+</div>

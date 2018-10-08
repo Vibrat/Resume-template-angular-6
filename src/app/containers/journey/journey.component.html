@@ -1,0 +1,54 @@
+<div class="journey-container" id="myStory">
+  <div class="journey-row">
+    <div class="journey-col">
+      <div class="journey-col-title">
+        {{ data.title.column1.name }}
+      </div>
+      <div class="journey-col-content">
+        <div class="journey-tree-component font-weight-bold header">
+          <i [innerHTML]="data.title.column1.description"></i>
+        </div>
+      </div>
+    </div>
+    <div class="journey-col">
+      <div class="journey-col-title">
+        {{ data.title.column2.name }}
+      </div>
+      <div class="journey-col-content">
+        <div class="journey-tree-component font-weight-bold header">
+          <i [innerHTML]="data.title.column2.description"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let lineItem of data.tree" class="journey-row">
+    <ng-template [ngIf]="lineItem.parent == 'column1'">
+      <div class="journey-col">
+        <div class="journey-col-content">
+          <div class="journey-tree-component" [innerHTML]="lineItem.text">
+          </div>
+        </div>
+      </div>
+      <div class="journey-col">
+        <div class="journey-col-content">
+          <div class="journey-tree-component font-italic" [innerHTML]="lineItem.year">
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="lineItem.parent == 'column2'">
+      <div class="journey-col">
+        <div class="journey-col-content">
+          <div class="journey-tree-component font-italic" [innerHTML]="lineItem.year">
+          </div>
+        </div>
+      </div>
+      <div class="journey-col">
+        <div class="journey-col-content">
+          <div class="journey-tree-component" [innerHTML]="lineItem.text">
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.footer-container {
+  border-top: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px;
+  .buttons {
+    .contact > button, a {
+      display: inline-block;
+      text-decoration: none;
+      margin: 8px;
+      background-color: #2F80ED;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .contacts  {
+    > span.contact {
+    margin: 4px 4px;
+    display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+    .contacts > span.contact {
+    }
+  }
+}

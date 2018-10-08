@@ -1,0 +1,121 @@
+.body-container {
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+  .body-row {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 216px);
+    > div:nth-child(2n + 1) {
+      flex: 0 0 290px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .body-col-title {
+        .btn-group {
+          width: 100%;
+          margin: 0 8px 8px 0;
+        }
+      }
+      .body-col-content {
+          h1.heading-title {
+            font-size: 68px;
+            font-weight: bold;
+          }
+      }
+    }
+    > div:nth-child(2n) {
+      width: calc(100% - 290px);
+      flex: 0 0 auto;
+      padding: 12px;
+      background-color: #f2c94c;
+      border-radius: 2px;
+      position: relative;
+      flex-direction: column;
+      .body-col-title {
+        text-transform: uppercase;
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 0.85;
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 130px;
+        border-right: 1px solid #000000;
+        span {
+          margin: 4px;
+          &.rotate180 {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .body-col-content {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        display: flex;
+        flex-direction: column;
+        span {
+          text-align: right;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px), (max-width: 823px) and (max-height: 411px) {
+  .body-container {
+    padding: 24px;
+    .body-row {
+      height: calc(100vh - 104px);
+      min-height: 480px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      > div:nth-child(2n + 1) {
+        width: 100%;
+        flex: 0 0 auto;
+        justify-content: flex-start;
+        .body-col-title {}
+        .body-col-content {
+          h1.heading-title {
+            font-size: 36px;
+            font-weight: bold;
+          }
+        }
+      }
+      > div:nth-child(2n) {
+        width: 100%;
+        flex: 4 4 auto;
+        padding: 0;
+        .body-col-title {
+          text-transform: uppercase;
+          font-size: 80px;
+          font-weight: bold;
+          line-height: 0.85;
+          padding: 4px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          width: 130px;
+          border-right: 1px solid #000000;
+          span {
+            margin: 4px;
+            &.rotate180 {
+              transform: rotate(180deg);
+            }
+          }
+        }
+        .body-col-content {
+          span {}
+        }
+      }
+    }
+  }
+}
