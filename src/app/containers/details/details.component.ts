@@ -60,20 +60,21 @@ export class DetailsComponent implements OnInit {
         "Create API using MVC model"
       ]
     },
-    makeup: {
-      title: "Makeup Language and Skills",
-      description: "Create template, design UI/ UX responsively",
-      rate: "A",
+    python: {
+      title: "Python",
+      description: "Processing data, model evaluation",
+      rate: "B",
       skills: [
-        { name: "HTML", rate: 5 },
-        { name: "CSS/ SCSS", rate: 5 },
-        { name: "Bootstrap", rate: 4.5 },
-        { name: "Photoshop/ Figma", rate: 3.5 }
+        { name: "OOP", rate: 3.5 },
+        { name: "Basics & Core", rate: 3 },
+        { name: "Pandas", rate: 3 },
+        { name: "Numpy", rate: 3 },
+        { name: "Scikitlearn", rate: 3 },
       ],
       keyNote: [
-        "Create custom template from scratch (responsively)",
-        "Design sketch, UI/ UX",
-        "Build UI/ UX Components based on requirements"
+        "Processing data",
+        "Model evaluation",
+        "Automation script"
       ]
     }
   };

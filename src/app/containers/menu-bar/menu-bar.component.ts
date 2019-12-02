@@ -9,7 +9,6 @@ export class MenuBarComponent implements OnInit {
   public menuItems = [
     { name: "About", tag: "#about", active: true, hideMobile: false },
     { name: "Experience", tag: "#skills", active: false, hideMobile: false },
-    { name: "Journey", tag: "#myStory", active: false, hideMobile: false },
     {
       name: "Download CV",
       data: "/assets/files/cv-lam-nguyen.pdf",
